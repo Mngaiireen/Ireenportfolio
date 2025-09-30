@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact || Ireen M'ngai Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700|Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------------- NAVIGATION ---------------- */
+    nav {
+      background-color:;
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    /* Logo floats on top, independent of layout */
+    .navbar-brand img {
+      position: absolute;
+      left: 0.001px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 200px;
+      width: auto;
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
+    .navbar-brand img:hover {
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    nav a {
+      color: #000 !important;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ---------------- HERO SECTION ---------------- */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),  no-repeat center center/cover;
+      height: 300px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+    .hero h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    /* ---------------- CONTACT SECTION ---------------- */
+    .contact-section {
+      padding: 80px 20px;
+      background-color: #f4f6f9;
+    }
+    .contact-section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .contact-info i {
+      font-size: 1.5rem;
+      color: #0077b6;
+      margin-right: 10px;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .contact-info a {
+      color: #0077b6;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .contact-form .form-control {
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #023e8a;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-split h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .footer-split a {
+      color: #ddd;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .footer-split a:hover {
+      color: #ff6f61;
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .navbar-brand img { height: 150px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/sif.png" alt="Logo">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html#home">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>Have a project or opportunity in mind? I’d love to hear from you!</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <!-- Contact Info -->
+    <div class="contact-info" data-aos="fade-up">
+      <p><i class="fas fa-envelope"></i>ntinyariireen4@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +254115268252</p>
+      <p>
+        <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ireenmngai" target="_blank">LinkedIn</a> |
+        <i class="fab fa-github"></i> <a href="https://github.com/Mngaiireen" target="_blank">GitHub</a>
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="contact-form" action="contact_handler.php" method="POST" data-aos="fade-up">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          <input type="text" name="subject" class="form-control" placeholder="Subject (Optional)">
+          <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-split">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <h5>About</h5>
+        <p>BSc Computer Science graduate & passionate developer creating modern solutions through code and design.</p>
+      </div>
+      <div class="col-md-6 text-md-right text-center">
+        <h5>Connect</h5>
+        <a href="https://mail.google.com/mail/?view=cm&to=ntinyariireen4@gmail.com" target="_blank">
+  <i class="fa-solid fa-envelope"></i>
+</a>
+
+        <a href="https://github.com/Mngaiireen" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/ireenmngai" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.1);">
+    <p class="text-center mb-0">&copy; 2025 Ireen M'ngai | Built with ❤️ and creativity</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
+
