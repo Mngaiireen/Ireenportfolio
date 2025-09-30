@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ireen M'ngai || Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700|Pacifico&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom Styles -->
+  <style>
+   /* ---------------- BODY ---------------- */
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* ---------------- NAV / HEADER ---------------- */
+nav {
+  background-color:;
+  position: relative;           /* for absolute logo positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;      /* nav links centered horizontally */
+  height: 100px;                /* fixed nav height */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Logo floats on top, independent of layout */
+.navbar-brand img {
+  position: absolute;           /* remove from flow */
+  left: 0.001px;                   /* horizontal offset */
+  top: 50%;                     /* vertical center */
+  transform: translateY(-50%);  /* perfect vertical alignment */
+  height: 200px;                /* change freely */
+  width: auto;
+  z-index: 10;                  /* on top */
+  transition: transform 0.3s ease; /* smooth zoom effect */
+}
+
+/* Optional zoom effect on hover */
+.navbar-brand img:hover {
+  transform: translateY(-50%) scale(1.2); /* zoom 20% */
+}
+
+
+/* Nav links */
+nav a {
+  color: #000 !important;
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;               /* vertical alignment */
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Optional: keep nav links in a row */
+nav > div, nav > ul {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/up.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  color:#fff ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  font-style: italic;
+  color: #000; 
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000;
+  animation: typing 2.5s steps(12, end) forwards, blink-caret .7s step-end 0s;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.8s forwards;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn-primary {
+  background-color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------------- ABOUT SECTION ---------------- */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f4f6f9;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* ---------------- SKILLS SECTION ---------------- */
+.skills {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.skills .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  background-color:#0006;
+}
+
+.skills .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.skills .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.skills .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  nav {
+    height: 80px;
+  }
+  .navbar-brand img {
+    height: 50px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .about h2, .skills h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    height: 100px; /* slightly taller header for mobile */
+    justify-content: center; /* keep links centered */
+  }
+
+  .navbar-brand img {
+    height: 180px; /* bigger logo on mobile */
+  }
+
+  nav a {
+    margin: 0 10px; /* adjust spacing for smaller screen */
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin: 5px 0; /* uniform vertical spacing */
+  }
+  .navbar-nav .nav-link {
+    margin: 0; /* remove horizontal margin that affects vertical spacing */
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="images/sif.png" alt="Logo">
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Ireen M'ngai</h1>
+    <p>Software Developer | IT Professional | Building modern web apps and solving real-world problems</p>
+    <a href="projects.html" class="btn btn-primary">View My Work</a>
+      <a href="https://mail.google.com/mail/?view=cm&to=ntinyariireen4@gmail.com&su=Request%20for%20CV" 
+         class="btn btn-primary" target="_blank">
+        Request CV
+      </a>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>
+Hello! I am <b>Ireen M'ngai</b>, a BSc Computer Science graduate and IT professional with a passion for software development. 
+I specialize in web development, API integration, and graphic design, creating responsive and interactive applications. 
+I enjoy solving complex problems, exploring networking and systems, and continuously learning new technologies. 
+Beyond tech, I am also keen on design, digital marketing, and innovative ideas.
+</p>
+
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="mb-5">Skills & Tech Stack</h2>
+    <div class="row text-center">
+
+      <!-- Programming -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-code"></i> Programming</h5>
+            <p class="card-text">
+              Java, Python, C/C++<br>
+              Data Structures & Algorithms<br>
+              Object-Oriented Programming
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-laptop-code"></i> Web Development</h5>
+            <p class="card-text">
+              HTML, CSS, JavaScript, React<br>
+              PHP, MySQL, Bootstrap<br>
+              APIs, Responsive Design
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-database"></i> Databases</h5>
+            <p class="card-text">
+              MySQL, PostgreSQL<br>
+              MongoDB (NoSQL)<br>
+              Database Design & Optimization
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Networking -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-network-wired"></i> Networking</h5>
+            <p class="card-text">
+              Network Setup & Security<br>
+              Troubleshooting & Maintenance<br>
+              Cisco Fundamentals
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-shield-alt"></i> Cybersecurity</h5>
+            <p class="card-text">
+              Ethical Hacking Basics<br>
+              System & Data Protection<br>
+              Risk Assessment & Mitigation
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-paint-brush"></i> Design</h5>
+            <p class="card-text">
+              Graphic Design (Adobe illustrator,Photoshop,)<br>
+              UI/UX Principles<br>
+              Branding & Visual Identity
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-bullhorn"></i> Digital Marketing</h5>
+            <p class="card-text">
+              SEO & Content Strategy<br>
+              Social Media Marketing<br>
+              Analytics & Campaigns
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-tools"></i> Tools</h5>
+            <p class="card-text">
+              Git & GitHub<br>
+              VS Code<br>
+              WordPress, Odoo, Hosting<br>
+              Linux, Windows Server
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="fas fa-user-friends"></i> Soft Skills</h5>
+            <p class="card-text">
+              Problem Solving<br>
+              Communication<br>
+              Team Collaboration<br>
+              Time Management
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer-split">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <h5>About</h5>
+        <p>BSc Computer Science graduate & passionate developer creating modern solutions through code and design.</p>
+      </div>
+      <div class="col-md-6 text-md-right text-center">
+        <h5>Connect</h5>
+           <a href="https://mail.google.com/mail/?view=cm&to=ntinyariireen4@gmail.com" target="_blank">
+  <i class="fa-solid fa-envelope"></i>
+</a>
+        <a href="https://github.com/Mngaiireen" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/ireenam'ngai" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <hr style="border-color: rgba(255,255,255,0.1);">
+    <p class="text-center mb-0">&copy; 2025 Ireen M'ngai| Built with ❤️ and creativity</p>
+  </div>
+</footer>
+
+<style>
+.footer-split {
+  background: #212529;
+  color: #ddd;
+  padding: 50px 20px;
+}
+.footer-split h5 { font-weight: 600; margin-bottom: 15px; }
+.footer-split a {
+  color: #ddd;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.footer-split a:hover { color: #ff6f61; }
+</style>
+
+
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
+
